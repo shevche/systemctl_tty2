@@ -1,0 +1,14 @@
+.include /lib/systemd/system/getty@.service
+
+[Unit]
+Description=htop on %I
+Documentation=man:htop(1)
+
+[Service]
+Environment=
+Environment=TERM=linux HOME=/root
+ExecStart=
+ExecStart=/usr/bin/htop
+StandardInput=tty-fail
+StandardOutput=tty
+
